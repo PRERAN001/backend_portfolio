@@ -15,7 +15,7 @@ app.post("/sendemail",async (req,res)=>{
     try {
         console.log("formdata", name, email, message)
         await resend.emails.send({
-        from: 'Acme <onboarding@resend.dev>',
+        from: 'Chck this!!!!!!!!! <onboarding@resend.dev>',
         to: ['preran248@gmail.com'],
         subject: `Message from ${name}`,
         html: `<p>${email}</p>
