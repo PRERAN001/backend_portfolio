@@ -6,7 +6,9 @@ const {Resend}=require("resend")
 
 const resend =new Resend(process.env.resend_api)
 const app=express()
-app.use(cors())
+app.use(cors({
+    origin: ["https://backend-portfolio-8im4.onrender.com"]
+}));
 app.use(express.json())
 app.post("/sendemail",async (req,res)=>{
     const { name, email, message } = req.body;
